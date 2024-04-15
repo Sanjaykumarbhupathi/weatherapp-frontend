@@ -127,7 +127,6 @@ const Forecast = () => {
       </div>
 
       <div className="border p-4 rounded-md">
-        {/* You can display other details or additional features here */}
         <img 
               src={getWeatherIconUrl(weatherData.weather[0].icon)} 
               alt={weatherData.weather[0].description} 
