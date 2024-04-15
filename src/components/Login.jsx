@@ -28,17 +28,14 @@ const Login = () => {
         password: formData.password,
       });
 
-      // If login is successful, you can handle token or redirect here
       setSuccessMessage('User logged in successfully');
       const { userId, username, token } = response.data;
 
-// Store the userId, username, and token in local storage
-localStorage.setItem('userId', userId);
-localStorage.setItem('username', username);
-localStorage.setItem('token', token);
-localStorage.setItem('user', JSON.stringify({ userId, username, token }));
+      localStorage.setItem('userId', userId);
+      localStorage.setItem('username', username);
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify({ userId, username, token }));
 
-    // Redirect to the home page
     window.location.href = '/';
       setError('');
     } catch (err) {
