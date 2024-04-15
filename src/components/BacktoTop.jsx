@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when user scrolls down 200px
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 200) {
@@ -20,7 +19,6 @@ const BackToTop = () => {
     };
   }, []);
 
-  // Scroll to top when button is clicked
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
